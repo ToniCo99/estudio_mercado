@@ -1,0 +1,396 @@
+/* Variables de Color IMDEEC */
+:root {
+    --azul-imdeec: #003865;
+    --azul-imdeec-hover: #002B4D; /* Un azul un poco más oscuro para hover */
+    --blanco: #FFFFFF;
+    --gris-claro: #f0f0f0; /* Un gris más suave */
+    --gris-borde: #dcdcdc; /* Gris para bordes */
+    --gris-texto-secundario: #666666; /* Gris más oscuro para texto secundario */
+    --texto-oscuro: #333333;
+    --sombra-suave: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif; /* Fuente más moderna */
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Fondo ligeramente grisáceo */
+    color: var(--texto-oscuro);
+    line-height: 1.7; /* Mayor interlineado */
+}
+
+header {
+    background-color: var(--azul-imdeec);
+    color: var(--blanco);
+    padding: 15px 40px; /* Más padding horizontal */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    box-shadow: var(--sombra-suave); /* Añadir sombra */
+    position: sticky; /* Header fijo */
+    top: 0;
+    z-index: 1000;
+}
+
+#logo {
+    height: 55px; /* Ligeramente más grande */
+    width: auto;
+    margin-right: 25px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.7em; /* Ajuste tamaño */
+    font-weight: 500;
+    text-align: right;
+    flex-grow: 1;
+}
+
+
+#tabs {
+    background-color: var(--blanco); /* Fondo blanco para pestañas */
+    padding: 0 40px; /* Alinear con header */
+    border-bottom: 1px solid var(--gris-borde); /* Borde más sutil */
+    display: flex;
+    gap: 8px; /* Más espacio entre botones */
+    flex-wrap: wrap;
+    margin-top: 1px; /* Separación mínima del header */
+}
+
+.tab-button {
+    padding: 12px 18px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    color: var(--azul-imdeec);
+    font-size: 0.95em;
+    font-weight: 500; /* Semi-negrita */
+    border-bottom: 3px solid transparent; /* Espacio para el borde activo */
+    transition: color 0.3s ease, border-bottom-color 0.3s ease; /* Transición suave */
+    white-space: nowrap;
+    margin-bottom: -1px; /* Alinear borde inferior con el de #tabs */
+}
+
+.tab-button:hover {
+    color: var(--azul-imdeec-hover);
+    background-color: transparent; /* Quitar fondo en hover */
+}
+
+.tab-button.active {
+    color: var(--azul-imdeec-hover);
+    border-bottom-color: var(--azul-imdeec); /* Indicador activo más claro */
+    font-weight: 700; /* Negrita para activo */
+    background-color: transparent; /* Quitar fondo en activo */
+}
+
+#tab-content {
+    padding: 40px; /* Más padding general */
+    max-width: 1200px; /* Ancho máximo para contenido */
+    margin: 20px auto; /* Centrar contenido */
+}
+
+.tab-pane {
+    display: none;
+    animation: fadeIn 0.4s ease-out; /* Animación más rápida y suave */
+    background-color: var(--blanco);
+    padding: 30px; /* Padding interno para cada panel */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: var(--sombra-suave);
+    border: 1px solid var(--gris-borde);
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+/* Animación Fade-in mejorada */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Estilos para contenido dentro de las pestañas */
+.tab-pane h2 {
+    color: var(--azul-imdeec);
+    border-bottom: 1px solid var(--gris-borde);
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+    font-size: 1.6em;
+    font-weight: 500;
+}
+
+.tab-pane h3 {
+    color: var(--azul-imdeec);
+    opacity: 0.9;
+    margin-top: 25px;
+    margin-bottom: 12px;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+.tab-pane ul {
+    list-style-type: none; /* Quitar puntos */
+    padding-left: 5px;
+}
+
+.tab-pane li {
+    margin-bottom: 10px;
+    padding-left: 20px; /* Espacio para el 'pseudo-elemento' */
+    position: relative;
+}
+
+/* Añadir un 'bullet' personalizado */
+.tab-pane li::before {
+    content: '\2022'; /* Código para bullet */
+    color: var(--azul-imdeec);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1.2em; /* Alinear con el texto */
+    position: absolute;
+    left: 10px;
+    top: 1px;
+}
+
+/* Estilos para tablas de datos */
+.data-table-container {
+    margin-top: 30px;
+    overflow-x: auto;
+    border: 1px solid var(--gris-borde);
+    border-radius: 6px;
+}
+.data-table-container h4 {
+     color: var(--azul-imdeec);
+     margin-bottom: 15px;
+     font-size: 1.1em;
+     padding: 10px 15px;
+     background-color: var(--gris-claro);
+     border-bottom: 1px solid var(--gris-borde);
+     border-radius: 6px 6px 0 0;
+     margin: 0; /* Quitar margen por defecto */
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0; /* Quitar margen si está dentro del container */
+}
+th, td {
+    border: none; /* Quitar bordes individuales */
+    border-bottom: 1px solid var(--gris-borde); /* Líneas horizontales */
+    padding: 12px 15px; /* Más padding */
+    text-align: left;
+    font-size: 0.95em;
+    vertical-align: middle; /* Alinear verticalmente */
+}
+td {
+    color: var(--texto-oscuro);
+}
+th {
+    background-color: #f8f9fa; /* Fondo ligeramente gris para cabeceras */
+    color: var(--azul-imdeec);
+    font-weight: 500; /* Semi-negrita */
+    white-space: nowrap;
+}
+tbody tr:last-child td {
+    border-bottom: none; /* Quitar borde inferior de la última fila */
+}
+tbody tr:nth-child(even) {
+    background-color: var(--blanco);
+}
+tbody tr:nth-child(odd) {
+    background-color: #fdfdfd; /* Alternancia sutil */
+}
+tbody tr:hover {
+    background-color: #e9ecef; /* Resaltar fila al pasar el ratón */
+}
+.data-table-container small {
+    font-size: 0.85em;
+    color: var(--gris-texto-secundario);
+    display: block;
+    padding: 10px 15px;
+    background-color: var(--gris-claro);
+    border-top: 1px solid var(--gris-borde);
+    border-radius: 0 0 6px 6px;
+    margin: 0;
+}
+
+/* Estilos para los nuevos gráficos */
+.chart-container {
+    width: 100%; /* Ocupar ancho disponible */
+    max-width: 700px; /* Aumentar ancho máximo */
+    height: 400px; /* Añadir una altura fija */
+    margin: 40px auto; /* Más margen vertical */
+    padding: 25px; /* Más padding */
+    background-color: var(--blanco);
+    border: 1px solid var(--gris-borde);
+    border-radius: 8px;
+    box-shadow: var(--sombra-suave);
+}
+
+.chart-container h4 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px; /* Más espacio bajo el título */
+    color: var(--azul-imdeec);
+    font-size: 1.15em;
+    font-weight: 500;
+}
+
+
+footer {
+    text-align: center;
+    margin-top: 50px; /* Más espacio antes del footer */
+    padding: 20px;
+    background-color: var(--gris-claro);
+    color: var(--gris-texto-secundario);
+    font-size: 0.9em;
+    border-top: 1px solid var(--gris-borde);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Mejoras responsivas */
+@media (max-width: 1200px) {
+    #tab-content {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 992px) {
+    header {
+        padding: 15px 25px;
+    }
+    #tabs {
+        padding: 0 25px;
+    }
+    .tab-button {
+        font-size: 0.9em;
+        padding: 10px 12px;
+    }
+     header h1 {
+        font-size: 1.5em;
+    }
+    #tab-content {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        line-height: 1.6;
+    }
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+        position: static; /* Quitar sticky en móvil si causa problemas */
+    }
+     #logo {
+        margin-bottom: 15px;
+        margin-right: 0;
+        height: 50px;
+    }
+    header h1 {
+        text-align: center;
+        font-size: 1.4em;
+        margin-top: 0;
+    }
+     #tabs {
+        justify-content: flex-start; /* Alinear a la izquierda */
+        overflow-x: auto; /* Permitir scroll horizontal */
+        white-space: nowrap; /* Evitar que los botones bajen */
+        padding: 5px 15px; /* Menos padding vertical */
+        scrollbar-width: thin; /* Estilo scrollbar Firefox */
+        scrollbar-color: var(--azul-imdeec) var(--gris-claro); /* Estilo scrollbar Firefox */
+    }
+    /* Estilo scrollbar Webkit/Blink */
+    #tabs::-webkit-scrollbar {
+        height: 5px;
+    }
+    #tabs::-webkit-scrollbar-track {
+        background: var(--gris-claro);
+    }
+    #tabs::-webkit-scrollbar-thumb {
+        background-color: var(--azul-imdeec) ;
+        border-radius: 10px;
+        border: 1px solid var(--gris-claro);
+    }
+
+    .tab-button {
+        font-size: 0.9em;
+        padding: 10px 15px;
+        flex-shrink: 0; /* Evitar que los botones se encojan */
+    }
+    #tab-content {
+        padding: 20px;
+        margin: 10px auto;
+    }
+    .tab-pane {
+        padding: 20px;
+    }
+    th, td {
+        padding: 10px 12px;
+        font-size: 0.9em;
+    }
+     /* Forzar que la tabla no sea más ancha que el padre */
+    .data-table-container {
+        width: 100%;
+        overflow-x: auto; /* Asegurar scroll si es necesario */
+        box-sizing: border-box; /* Incluir borde en el ancho */
+    }
+    table {
+        min-width: 600px; /* Ancho mínimo para evitar compresión excesiva */
+    }
+     .chart-container {
+        width: 100%; /* Ocupar todo el ancho */
+        padding: 15px;
+        box-sizing: border-box;
+    }
+}
+
+@media (max-width: 480px) {
+     header h1 {
+        font-size: 1.3em;
+    }
+    #tab-content {
+        padding: 15px;
+    }
+    .tab-pane {
+        padding: 15px;
+    }
+    .tab-pane h2 {
+        font-size: 1.4em;
+    }
+    .tab-pane h3 {
+        font-size: 1.1em;
+    }
+    th, td {
+        padding: 8px 10px;
+        font-size: 0.85em;
+    }
+    table {
+        min-width: 400px; /* Reducir ancho mínimo */
+    }
+}
+
+/* Estilos para el contenedor PDF */
+.pdf-container {
+    width: 100%;
+    height: 80vh; /* Ocupar el 80% de la altura visible */
+    margin-top: 20px;
+    border: 1px solid var(--gris-borde);
+    box-shadow: var(--sombra-suave);
+    border-radius: 8px;
+    overflow: hidden; /* Para asegurar que el iframe no se desborde */
+}
+
+.pdf-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none; /* Quitar borde del iframe */
+} 

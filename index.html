@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudio Mercado Carne de Conejo - IMDEEC</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <img src="logo_imdeec.png" alt="Logo IMDEEC" id="logo">
+        <h1>Análisis Interactivo: Estudio de Mercado Carne de Conejo</h1>
+    </header>
+
+    <nav id="tabs">
+        <button class="tab-button" data-tab="resumen">Resumen Ejecutivo</button>
+        <button class="tab-button" data-tab="cultural">Preferencias Culturales</button>
+        <button class="tab-button" data-tab="demografia">Datos Demográficos</button>
+        <button class="tab-button" data-tab="habitos">Hábitos de Consumo</button>
+        <button class="tab-button" data-tab="disponibilidad">Disponibilidad</button>
+        <button class="tab-button" data-tab="competencia">Competencia</button>
+        <button class="tab-button" data-tab="datos">Datos Clave</button>
+        <button class="tab-button" data-tab="oportunidades">Oportunidades</button>
+        <button class="tab-button" data-tab="conclusiones">Conclusiones</button>
+        <button class="tab-button active" data-tab="pdf-viewer">Estudio Completo (PDF)</button>
+    </nav>
+
+    <main id="tab-content">
+        <!-- Resumen Ejecutivo -->
+        <section id="resumen" class="tab-pane">
+            <h2>Resumen Ejecutivo</h2>
+            <p>Este análisis aborda el consumo y producción de carne de conejo, enfocándose en mercados como Malasia, Argelia, Egipto e Indonesia. A pesar de ser una alternativa saludable (rica en proteínas, baja en grasa), su consumo es bajo debido a barreras culturales, económicas y de disponibilidad.</p>
+            <p><strong>Claves del Estudio:</strong></p>
+            <ul>
+                <li>Bajo consumo generalizado, con variaciones regionales significativas.</li>
+                <li>Barreras: Percepción cultural (mascota), falta de recetas populares, precio elevado, competencia fuerte (pollo, cordero), limitada disponibilidad y promoción.</li>
+                <li>Oportunidades: Segmentos específicos (salud, gourmet, Halal), mejora de la producción local, marketing educativo.</li>
+                <li>Recomendaciones: Optimizar distribución, campañas educativas intensivas, posicionamiento premium, certificaciones, exploración de mercados internacionales.</li>
+            </ul>
+            <p><em>(Sección basada en la introducción y conclusiones generales del estudio).</em></p>
+        </section>
+
+        <!-- Preferencias Culturales -->
+        <section id="cultural" class="tab-pane">
+            <h2>Preferencias Culturales del Consumo</h2>
+            <h3>Percepción del Producto</h3>
+            <ul>
+                <li><strong>Imagen Cultural:</strong> A menudo asociado con mascotas, dificultando su aceptación como alimento (especialmente urbano). Revalorización por nutrición en algunos contextos.</li>
+                <li><strong>Factor Exótico:</strong> Percibido como manjar o gourmet en Malasia/Indonesia por falta de familiaridad.</li>
+                <li><strong>Impacto Religioso (Halal):</strong> Es Halal si se sigue el ritual, pero interpretaciones divergentes y costumbres locales limitan su consumo incluso en países musulmanes.</li>
+            </ul>
+            <h3>Variación Regional</h3>
+            <ul>
+                <li><strong>Marruecos/Argelia:</strong> Consumo limitado en zonas urbanas (lujo/precio), más común en rurales (cría local).</li>
+                <li><strong>Egipto:</strong> Mayor aceptación (especialmente rural), vista como alternativa saludable. Limitado en ciudades.</li>
+                <li><strong>Malasia/Indonesia:</strong> Raro en menús cotidianos urbanos (mascota, falta de costumbre). Presente en restaurantes exclusivos/rurales.</li>
+            </ul>
+            <h3>Desafíos</h3>
+            <ul>
+                <li><strong>Falta de Recetas Tradicionales Populares:</strong> Las existentes (tajines, guisos) son a menudo complejas/lentas, poco atractivas para jóvenes. Escasez en Malasia/Indonesia.</li>
+                <li><strong>Falta de Promoción:</strong> Poca visibilidad en medios y supermercados, contribuyendo al desconocimiento. Necesidad de campañas educativas.</li>
+            </ul>
+        </section>
+
+        <!-- Datos Demográficos -->
+        <section id="demografia" class="tab-pane">
+            <h2>Datos Demográficos del Consumo</h2>
+            <h3>Segmentación por Edad</h3>
+            <ul>
+                <li><strong>Jóvenes (18-35):</strong> Más abiertos a probar (curiosidad, salud), especialmente urbanos.</li>
+                <li><strong>Adultos (36-60):</strong> Más ligados a tradición, pero interés por salud. Consumo mayor en zonas rurales.</li>
+                <li><strong>Ancianos (60+):</strong> Mayor adherencia a tradiciones, menor consumo (poca familiaridad, dietas).</li>
+            </ul>
+            <h3>Segmentación por Género</h3>
+            <ul>
+                <li><strong>Hombres:</strong> Consumen más (normas culturales, acceso).</li>
+                <li><strong>Mujeres:</strong> Más resistentes (cultural, mascota), pero abiertas en contexto familiar o por salud.</li>
+                <li><strong>Marketing:</strong> Se sugiere enfoque diferenciado por género.</li>
+            </ul>
+            <h3>Nivel Socioeconómico</h3>
+            <ul>
+                <li><strong>Clase Alta/Media-Alta:</strong> Más propensos (premium, gourmet, salud, disposición a pagar).</li>
+                <li><strong>Clase Media/Media-Baja:</strong> Consumo ocasional (precio como barrera, conciencia nutricional creciente).</li>
+                <li><strong>Clase Baja:</strong> Accesibilidad limitada (precio urbano), excepto en zonas rurales con cría local.</li>
+            </ul>
+             <h3>Distribución Geográfica</h3>
+            <ul>
+                <li><strong>Zonas Urbanas:</strong> Acceso limitado, precios altos, consumo bajo y de nicho.</li>
+                <li><strong>Zonas Rurales:</strong> Consumo más frecuente y accesible (cría local).</li>
+            </ul>
+        </section>
+
+        <!-- Hábitos de Consumo -->
+        <section id="habitos" class="tab-pane">
+            <h2>Hábitos de Consumo</h2>
+            <h3>Frecuencia</h3>
+            <ul>
+                <li><strong>Consumo Esporádico:</strong> Generalmente no es parte de la dieta diaria. Ligado a eventos especiales (bodas, reuniones familiares).</li>
+                <li><strong>Factores:</strong> Percepción de lujo/gourmet (Marruecos), alto costo, costumbres familiares (más común si hay cría local).</li>
+            </ul>
+            <h3>Consumo en Festividades</h3>
+            <ul>
+                <li><strong>Ramadán:</strong> Aumento del consumo (Iftar), valorado como opción saludable y ligera.</li>
+                <li><strong>Otras Celebraciones:</strong> Bodas, compromisos, fiestas religiosas (Eid) en Magreb, asociado a celebración.</li>
+            </ul>
+            <h3>Métodos de Preparación</h3>
+            <ul>
+                <li><strong>Tradicionales:</strong> Tajines/Estofados (Magreb), Guisos (Egipto - Molokhia). Requieren tiempo/complejidad.</li>
+                <li><strong>Modernas:</strong> Cocina gourmet/fusión (urbana), formatos rápidos adaptados (satay, filetes), hamburguesas/albóndigas. Aprovechando versatilidad.</li>
+            </ul>
+        </section>
+
+        <!-- Disponibilidad -->
+        <section id="disponibilidad" class="tab-pane">
+            <h2>Disponibilidad en Mercados y Supermercados</h2>
+            <h3>Canales de Distribución</h3>
+            <ul>
+                <li><strong>Carnicerías Tradicionales:</strong> Clave en zonas rurales/clase media-baja. Mayor cercanía, frescura, posible mejor precio. Relación con productores locales.</li>
+                <li><strong>Supermercados:</strong> Presencia limitada en zonas urbanas (baja demanda/rotación, alto precio). Principalmente congelados/troceados. Poca promoción/visibilidad.</li>
+                <li><strong>Distribuidores Mayoristas:</strong> Abastecen restaurantes (gourmet - principal canal urbano) y mercados/ferias locales (nicho).</li>
+            </ul>
+            <h3>Factores Limitantes</h3>
+            <ul>
+                <li><strong>Precio Elevado:</strong> Costos de producción altos, competencia con carnes baratas (pollo), oferta limitada influye en precio.</li>
+                <li><strong>Escasa Promoción:</strong> Falta de visibilidad (publicidad), desconocimiento beneficios nutricionales, poca presencia en eventos culinarios masivos.</li>
+            </ul>
+             <h3>Comercio Internacional y Producción Local</h3>
+             <ul>
+                <li><strong>Malasia:</strong> Industria emergente, demanda>oferta, apoyo gubernamental (Halal, jóvenes), modernización.</li>
+                <li><strong>Argelia:</strong> Producción tradicional/autoconsumo, interés en profesionalizar (intensiva, genética). Potencial mejora.</li>
+                <li><strong>Egipto:</strong> Principal productor africano (pequeños agricultores + expansión comercial), mejora genética, impacto seguridad alimentaria rural. Potencial crecimiento.</li>
+            </ul>
+        </section>
+
+        <!-- Competencia -->
+        <section id="competencia" class="tab-pane">
+            <h2>Competencia con Otras Carnes Populares</h2>
+             <h3>Precio y Accesibilidad</h3>
+             <ul>
+                 <li><strong>Costos:</strong> Producción más cara que pollo/res.</li>
+                 <li><strong>Impacto:</strong> Consumidores optan por alternativas más baratas (pollo). Priorizan costo sobre beneficios.</li>
+                 <li><strong>Disponibilidad:</strong> Oferta limitada en supermercados vs. ubicuidad de pollo/cordero.</li>
+                 <li><strong>Percepción:</strong> Considerado lujo/ocasional vs. carnes comunes.</li>
+             </ul>
+            <h3>Preferencia por Otras Carnes</h3>
+            <ul>
+                <li><strong>Cultura/Tradición:</strong> Arraigo fuerte de pollo, cordero, res. Falta de tradición con conejo (Turquía, Arabia Saudita). Cordero (festivo), Pollo (diario).</li>
+                <li><strong>Sabor/Textura:</strong> Percibido como más suave vs. sabor robusto de otras carnes. Menos versátil en cocina popular.</li>
+                <li><strong>Falta de Recetas Populares:</strong> Escasez de recetas diarias conocidas. Preparación a menudo más compleja/larga vs. rapidez del pollo.</li>
+            </ul>
+        </section>
+
+        <!-- Datos Clave -->
+        <section id="datos" class="tab-pane">
+            <h2>Datos Clave y Cifras</h2>
+            <h3>Consumo per Cápita y Producción (Aprox.)</h3>
+            <!-- Aquí podríamos insertar una tabla o gráfico generado con JS -->
+            <div class="data-table-container">
+                <h4>Producción y Consumo Anual por País</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>País</th>
+                            <th>Producción (Tn)</th>
+                            <th>Consumo (kg/año)</th>
+                            <th>Importaciones (Tn)</th>
+                            <th>Exportaciones (Tn)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Malasia</td><td>1.2</td><td>0.02</td><td>500</td><td>50</td></tr>
+                        <tr><td>Argelia</td><td>3.5</td><td>0.10</td><td>200</td><td>100</td></tr>
+                        <tr><td>Egipto</td><td>22</td><td>0.80</td><td>100</td><td>5</td></tr>
+                        <tr><td>Indonesia</td><td>900</td><td>0.01</td><td>400</td><td>20</td></tr>
+                        <tr><td>España</td><td>N/A</td><td>0.7 (2023, ↓ desde 1.4 en 2013)</td><td>N/A</td><td>N/A</td></tr>
+                    </tbody>
+                </table>
+                <small>Fuentes: FAO, OCI, MOA Egypt, DOSM, BPPSDMP, Datos España (Contexto estudio)</small>
+            </div>
+
+            <h3>Flujos Comerciales Mensuales (Sector Cárnico General - Miles €)</h3>
+            <!-- Aquí podríamos insertar un gráfico de líneas generado con JS -->
+             <div class="data-table-container">
+                <h4>Export/Import 2023 vs 2024 (Ene-Dic Proy.)</h4>
+                <p>Se observa un balance comercial negativo (Import > Export) constante en el sector.</p>
+                <!-- Idealmente, aquí iría un gráfico interactivo mostrando la tabla del estudio -->
+                 <p><em>(Visualización interactiva de la tabla de flujos comerciales iría aquí).</em></p>
+             </div>
+
+            <h3>Frecuencia de Consumo (Resumen)</h3>
+             <ul>
+                 <li><strong>General:</strong> Bajo y esporádico en la mayoría de los países estudiados.</li>
+                 <li><strong>Egipto:</strong> Relativamente más alto, pero aún bajo (<1 kg/año). Mayor en zonas rurales y Ramadán/invierno.</li>
+                 <li><strong>Argelia/Marruecos:</strong> Ocasional, ligado a eventos/zonas rurales. Aumento estacional (Ramadán/invierno).</li>
+                 <li><strong>Malasia/Indonesia:</strong> Extremadamente bajo (barreras culturales fuertes).</li>
+             </ul>
+
+            <!-- Nuevos Gráficos -->
+            <div class="chart-container">
+                <h4>Comparativa Nutricional (por 100g)</h4>
+                <canvas id="nutritionComparisonChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <h4>Eficiencia Conversión Proteína</h4>
+                <canvas id="proteinEfficiencyChart"></canvas>
+                 <p style="text-align: center; font-size: 0.9em; margin-top: 10px;">
+                    Mercado global estimado: ~4.45 Billones USD (Fuente: Cognitive Market Research).
+                 </p>
+            </div>
+            <!-- Fin Nuevos Gráficos -->
+
+        </section>
+
+        <!-- Oportunidades -->
+        <section id="oportunidades" class="tab-pane">
+            <h2>Oportunidades de Mercado</h2>
+            <h3>Posicionamiento de Producto Premium</h3>
+            <ul>
+                <li><strong>Salud y Bienestar:</strong> Atraer consumidores conscientes (bajo grasa/colesterol, dietas especiales).</li>
+                <li><strong>Restaurantes Gourmet:</strong> Crear percepción de lujo/exclusividad en menús de alta gama.</li>
+                <li><strong>Mercado de Regalos Gourmet:</strong> Empaques y presentaciones exclusivas.</li>
+                <li><strong>Mercado Orgánico/Local:</strong> Atraer consumidores que valoran lo natural y sostenible.</li>
+            </ul>
+            <h3>Estrategias de Marketing Clave</h3>
+            <ul>
+                <li><strong>Campañas Educativas:</strong> Promocionar beneficios nutricionales (digital, expertos), comparativas con otras carnes.</li>
+                <li><strong>Degustaciones y Eventos:</strong> Familiarizar al consumidor (supermercados, ferias gastronómicas).</li>
+                <li><strong>Colaboraciones:</strong> Chefs, restaurantes, influencers culinarios (recetas, credibilidad).</li>
+                <li><strong>Promoción de Recetas/Formatos Accesibles:</strong> Recetas sencillas, formatos convenientes (precortados).</li>
+            </ul>
+        </section>
+
+         <!-- Conclusiones y Recomendaciones -->
+        <section id="conclusiones" class="tab-pane">
+            <h2>Conclusiones y Recomendaciones</h2>
+             <p>La carne de conejo tiene potencial (salud, sostenibilidad) pero requiere superar barreras significativas. Es clave un enfoque estratégico en distribución, educación y posicionamiento.</p>
+            <h3>Recomendaciones de Distribución</h3>
+            <ul>
+                <li>Optimizar cadena de suministro (logística, refrigeración).</li>
+                <li>Fomentar alianzas locales (productores, distribuidores).</li>
+                <li>Ampliar puntos de venta (supermercados urbanos, formatos convenientes).</li>
+                <li>Garantizar calidad, frescura y certificaciones (ej. Halal).</li>
+                 <li>Enfocarse en sostenibilidad.</li>
+            </ul>
+             <h3>Estrategias Educativas</h3>
+            <ul>
+                <li>Promocionar beneficios nutricionales y versatilidad culinaria.</li>
+                <li>Utilizar medios digitales y redes sociales (especialmente para jóvenes).</li>
+                 <li>Implementar programas educativos (escuelas, comunidades).</li>
+            </ul>
+             <h3>Expansión de Mercado</h3>
+             <ul>
+                 <li>Explorar mercados internacionales (Magreb, otros mercados musulmanes).</li>
+                 <li>Aprovechar la certificación Halal.</li>
+                 <li>Enfocarse en mercados gourmet internacionales.</li>
+             </ul>
+        </section>
+
+        <!-- Visor de PDF -->
+        <section id="pdf-viewer" class="tab-pane active">
+            <h2>Estudio de Mercado Completo</h2>
+            <p>A continuación puede visualizar el documento PDF completo del estudio:</p>
+            <div class="pdf-container">
+                <iframe src="estudio_conejo.pdf" type="application/pdf" width="100%" height="800px">
+                    <p>Parece que tu navegador no soporta iframes para PDF. Puedes <a href="estudio_conejo.pdf">descargar el PDF aquí</a>.</p>
+                </iframe>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 - Análisis Interactivo para IMDEEC basado en Estudio de Mercado.</p>
+        <p style="font-size: 0.8em; color: #aaa;">We ❤️ Imdeec</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

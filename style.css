@@ -39,6 +39,9 @@ header {
     height: 55px; /* Ligeramente más grande */
     width: auto;
     margin-right: 25px;
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
 }
 
 header h1 {
@@ -387,10 +390,119 @@ html {
     box-shadow: var(--sombra-suave);
     border-radius: 8px;
     overflow: hidden; /* Para asegurar que el iframe no se desborde */
+    position: relative;
+}
+
+.pdf-toolbar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 0 0 0 8px;
+    padding: 5px;
+    z-index: 10;
+    display: flex;
+    gap: 5px;
+}
+
+.pdf-toolbar button {
+    background-color: var(--blanco);
+    border: 1px solid var(--gris-borde);
+    border-radius: 4px;
+    cursor: pointer;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+}
+
+.pdf-toolbar button:hover {
+    background-color: var(--gris-claro);
+}
+
+.pdf-toolbar svg {
+    fill: var(--azul-imdeec);
 }
 
 .pdf-container iframe {
     width: 100%;
     height: 100%;
     border: none; /* Quitar borde del iframe */
+}
+
+/* Estilos para la galería de fotos */
+.gallery-container {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+.gallery-item {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--sombra-suave);
+    border: 1px solid var(--gris-borde);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+}
+
+.gallery-item img {
+    width: 100%;
+    aspect-ratio: 3/4;
+    object-fit: contain;
+    display: block;
+    background-color: #f8f9fa;
+}
+
+.gallery-caption {
+    padding: 10px 15px 5px;
+    text-align: center;
+    font-weight: 500;
+    color: var(--azul-imdeec);
+    background-color: var(--blanco);
+    border-top: 1px solid var(--gris-borde);
+    margin-bottom: 0;
+}
+
+.gallery-description {
+    padding: 0 15px 10px;
+    text-align: center;
+    font-size: 0.85em;
+    color: var(--gris-texto-secundario);
+    background-color: var(--blanco);
+}
+
+/* Responsive para la galería */
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 15px;
+    }
+    
+    .gallery-item img {
+        height: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 10px;
+    }
+    
+    .gallery-item img {
+        height: 140px;
+    }
 } 

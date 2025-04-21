@@ -23,6 +23,7 @@
         <button class="tab-button" data-tab="datos">Datos Clave</button>
         <button class="tab-button" data-tab="oportunidades">Oportunidades</button>
         <button class="tab-button" data-tab="conclusiones">Conclusiones</button>
+        <button class="tab-button" data-tab="autores">Autores</button>
         <button class="tab-button active" data-tab="pdf-viewer">Estudio Completo (PDF)</button>
     </nav>
 
@@ -262,9 +263,47 @@
             <h2>Estudio de Mercado Completo</h2>
             <p>A continuación puede visualizar el documento PDF completo del estudio:</p>
             <div class="pdf-container">
-                <iframe src="estudio_conejo.pdf" type="application/pdf" width="100%" height="800px">
+                <div class="pdf-toolbar">
+                    <button id="fullscreen-btn" title="Pantalla Completa">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                            <path d="M0 0h24v24H0z" fill="none"/>
+                            <path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/>
+                        </svg>
+                    </button>
+                </div>
+                <iframe id="pdf-frame" src="estudio_conejo.pdf" type="application/pdf" width="100%" height="800px">
                     <p>Parece que tu navegador no soporta iframes para PDF. Puedes <a href="estudio_conejo.pdf">descargar el PDF aquí</a>.</p>
                 </iframe>
+            </div>
+        </section>
+
+        <!-- Autores -->
+        <section id="autores" class="tab-pane">
+            <h2>Autores</h2>
+            <p>Equipo responsable del estudio de mercado:</p>
+            <div class="gallery-container">
+                <div class="gallery">
+                    <div class="gallery-item">
+                        <img src="pibes/rafa.jpg" alt="Rafael Bueno">
+                        <div class="gallery-caption">Rafael Bueno</div>
+                        <div class="gallery-description">Analista de datos y mercados internacionales</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="pibes/marina.jpg" alt="Marina García">
+                        <div class="gallery-caption">Marina García</div>
+                        <div class="gallery-description">Especialista en investigación socioeconómica</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="pibes/coca.jpg" alt="Antonio Coca">
+                        <div class="gallery-caption">Antonio Coca</div>
+                        <div class="gallery-description">Director de proyectos de expansión comercial</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="pibes/carmona.jpg" alt="Antonio Carmona">
+                        <div class="gallery-caption">Antonio Carmona</div>
+                        <div class="gallery-description">Consultor en desarrollo de mercados</div>
+                    </div>
+                </div>
             </div>
         </section>
 
